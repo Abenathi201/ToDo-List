@@ -3,20 +3,20 @@ let display = document.getElementById("display");
 let button = document.getElementById("submit");
 
 button.addEventListener("click", function(){
-    let para = document.createElement("p");
-    para.innerHTML = input.value;
-    display.appendChild(para);
+    let text = document.createElement("p");
+    text.innerHTML = input.value;
+    display.appendChild(text);
     storeData();
 
     text.addEventListener("click", function() {
-        para.style.textDecoration = "line-through";
+        text.style.textDecoration = "line-through";
         storeData();
     })
     function storeData() {
-        localStorage.setItem("data", para.innerHTML)
+        localStorage.setItem("data", text.innerHTML)
     }
     function showData() {
-        para.innerHTML = localStorage.getItem("data")
+        text.innerHTML = localStorage.getItem("data")
     }
     showData()
 
