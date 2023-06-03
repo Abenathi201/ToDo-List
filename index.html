@@ -7,15 +7,20 @@
 
     <link rel="stylesheet" href="./style/style.css">
 
+    <script src="https://kit.fontawesome.com/850ca6a355.js" crossorigin="anonymous"></script>
+
     <title>Todo-List</title>
 </head>
 <body>
-    <h1>ToDo - List</h1>
+    <h1>Todo-List</h1>
 
     <div class="container">
         <div class="tasks">
+            <button id="sort">Sort</button>
             <input type="text" id="input">
+            <input type="hidden" id="secondInput">
             <button id="submit">Enter</button>
+            <button id="secondSubmit" style="display: none;"></button>
         </div>
 
         <div id="display">
