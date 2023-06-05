@@ -45,14 +45,13 @@ button.addEventListener("click", function(event){
         myArray.forEach((data, index) => {
             // container += `
             
-            // `
+            // Have to use getElemets by something
             display.innerHTML += `
-                <p>${data}</p>
+                <p id="text">${data}</p>
                 <button onclick="deleteItems(${index})" class="fa-sharp fa-solid fa-trash""></button>
-                <button onclick="editItems(${index})" class="fa-solid fa-pen"></button>
             `
-            display.addEventListener("click", function() {
-                display.style.textDecoration = "line-through";
+            p.addEventListener("click", function() {
+                p.style.textDecoration = "line-through";
             })
         });
         
@@ -67,7 +66,7 @@ button.addEventListener("click", function(event){
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-        const dom = localStorage.getItem("todo");
+        let dom = localStorage.getItem("todo");
         if(dom) {
             todo = JSON.parse(dom);
             todo.forEach((d) => {
@@ -78,13 +77,28 @@ button.addEventListener("click", function(event){
 
     sort.addEventListener("click", function () {
 
-        myArray.sort((a, b) => {
-            if(a.value > b.value) {
-                return 1;
-            } else if (a.value < b.value) {
-                return -1;
-            }
-        })
+        // myArray.sort((a, b) => {
+        //     if(a.value > b.value) {
+        //         return 1;
+        //     } else if (a.value < b.value) {
+        //         return -1;
+        //     }
+        // })
+
+        // let sortArray = localStorage.getItem("todo");
+        // if(sortArray) {
+        //     todo = JSON.parse(sortArray);
+        //     todo.sort((a, b) => {
+        //         if (a.value > b.value) {
+        //             return 1;
+        //         }
+        //         else if (a.value < b.value) {
+        //             return -1;
+        //         }
+        //     })
+        // }
+        
+
     })
 
 
