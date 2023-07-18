@@ -24,6 +24,8 @@ body{
 .tasks{
     position: relative;
     padding: 30px 20px;
+    display: flex;
+    gap: 10px;
 }
 
 .tasks input{
